@@ -3,44 +3,50 @@
 namespace ochko
 {
     class Program
-    {
+    {       
         static void Main(string[] args)
         {
-            int[] cards = new int[]
-            {
-                2,3,4,5,6,7,8,9,10,10,10,10,11,
-                2,3,4,5,6,7,8,9,10,10,10,10,11,
-                2,3,4,5,6,7,8,9,10,10,10,10,11,
-                2,3,4,5,6,7,8,9,10,10,10,10,11
-            };
+            Printer.Print("Test value");
+            Game.PrintInfo("test");
 
-            cards = Shaffle(cards);
-            cards = Shaffle(cards);
-            cards = Shaffle(cards);            
 
-            bool isPlayerContinue = true;
-            bool isComputerContinue = true;
-            int index = 0;
-            Random random = new Random();
 
-            do
-            {
-                Console.WriteLine("Будешь тянуть карту, y/n");
-                string answer = Console.ReadLine();
 
-                isPlayerContinue = PlayersChoice(isPlayerContinue, answer);
-                if (isPlayerContinue == true)
-                {
-                    GiveCard(index,cards);
-                    index++;
-                }
-                isComputerContinue = ComputerChoice(isComputerContinue, random);
-                if (isComputerContinue == true)
-                {
-                    GiveCard(index,cards);
-                    index++;
-                }
-            } while (isPlayerContinue || isComputerContinue);
+            //int[] cards = new int[]
+            //{
+            //    2,3,4,5,6,7,8,9,10,10,10,10,11,
+            //    2,3,4,5,6,7,8,9,10,10,10,10,11,
+            //    2,3,4,5,6,7,8,9,10,10,10,10,11,
+            //    2,3,4,5,6,7,8,9,10,10,10,10,11
+            //};
+
+            //cards = Shaffle(cards);
+            //cards = Shaffle(cards);
+            //cards = Shaffle(cards);            
+
+            //bool isPlayerContinue = true;
+            //bool isComputerContinue = true;
+            //int index = 0;
+            //Random random = new Random();
+
+            //do
+            //{
+            //    Console.WriteLine("Будешь тянуть карту, y/n");
+            //    string answer = Console.ReadLine();
+
+            //    isPlayerContinue = PlayersChoice(isPlayerContinue, answer);
+            //    if (isPlayerContinue == true)
+            //    {
+            //        GiveCard(index,cards);
+            //        index++;
+            //    }
+            //    isComputerContinue = ComputerChoice(isComputerContinue, random);
+            //    if (isComputerContinue == true)
+            //    {
+            //        GiveCard(index,cards);
+            //        index++;
+            //    }
+            //} while (isPlayerContinue || isComputerContinue);
 
         }
 
